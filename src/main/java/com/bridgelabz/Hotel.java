@@ -6,7 +6,7 @@ public class Hotel {
     public int rating;
     public double regularCustomerRate;
 
-    public Hotel(String hotelName, int rating, double regularCustomerRate) {
+    public Hotel(int rating, double regularCustomerRate) {
         this.hotelName = hotelName;
         this.rating = rating;
         this.regularCustomerRate = regularCustomerRate;
