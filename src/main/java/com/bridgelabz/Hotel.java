@@ -7,13 +7,13 @@ public class Hotel {
     private double regularCustomerRate;
     private double weekendRegularCustomerRate;
 
-    /**
+    /*
      * Default Constructor
      */
     public Hotel(String hotelName, int rating, double regularCustomerRate) {
     }
 
-    /**
+    /*
      * hotelName           - Name of the hotel.
      * rating              - Rating for the hotel
      * regularCustomerRate - Rate for regular customers.
@@ -25,7 +25,7 @@ public class Hotel {
         this.weekendRegularCustomerRate = weekendRegularCustomerRate;
     }
 
-    /**
+    /*
      * Getters and Setters for hotelName, rating and regularCustomerRate
      */
     public String getHotelName() {
@@ -60,7 +60,7 @@ public class Hotel {
         this.weekendRegularCustomerRate = weekendRegularCustomerRate;
     }
 
-    /**
+    /*
      * toString Method to make list of hotels to String form for printing.
      */
     @Override

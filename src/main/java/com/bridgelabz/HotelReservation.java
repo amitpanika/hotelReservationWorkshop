@@ -16,11 +16,11 @@ public class HotelReservation {
     double regularCustomerRate;
     double weekendRegularCustomerRate;
     Scanner sc = new Scanner(System.in);
-    /**
+    /*
      * Creating ArrayList of Hotel named hotelList of Hotel type
      */
     ArrayList<Hotel> hotelList = new ArrayList<Hotel>();
-    /**
+    /*
      * hotel - Instance (object) of Hotel Class
      */
     Hotel hotel;
@@ -29,7 +29,7 @@ public class HotelReservation {
         System.out.println(hotelList);
     }
 
-    /**
+    /*
      * Method to add new hotel to hotel list First Taking user input for Hotel Name,
      * Rating and Regular Customer Rate. Then providing all the inputs to hotel
      * object Calling inbuilt add method for array list to add new hotel to the
@@ -76,19 +76,19 @@ public class HotelReservation {
                     break;
             }
         }
-        /**
+        /*
          * Defining week days and weekends
          */
         final int weekdaysNumber = numberOfDays - weekends;
         final int weekendsNumber = weekends;
-        /**
+        /*
          * Calculating cheapest rate (weekdays*week days rate)+(weekends*weekend rates)
          */
         final double cheapestPrice = hotelList.stream()
                 .mapToDouble(hotel -> ((hotel.getWeekendRegularCustomerRate() * weekendsNumber) + hotel.getRegularCustomerRate() * weekdaysNumber))
                 .min()
                 .orElse(Double.MAX_VALUE);
-        /**
+        /*
          * Filtering and collecting hotel with cheapest rate
          */
         ArrayList<Hotel> cheapestHotel = hotelList.stream()
