@@ -1,40 +1,46 @@
+
 package com.bridgelabz;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Optional;
 import java.util.Scanner;
 
 public class HotelReservation {
-
     String hotelName;
     int rating;
     double regularCustomerRate;
-    Scanner scanner = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
+    /**
+     * Creating ArrayList of Hotel named hotelList of Hotel type
+     */
+    ArrayList<Hotel> hotelList = new ArrayList<Hotel>();
+    /**
+     * hotel - Instance (object) of Hotel Class
+     */
     Hotel hotel;
-    ArrayList<Hotel> HotelList = new ArrayList<Hotel>();
 
+    /**
+     * Method to add new hotel to hotel list First Taking user input for Hotel Name,
+     * Rating and Regular Customer Rate. Than providing all the inputs to hotel
+     * object Calling inbuilt add method for array list to add new hotel to the
+     * hotelList. return - boolean value for addition of new Hotel to the ArrayList
+     * hotelList
+     */
     public boolean addHotel() {
-        System.out.println("Enter hotel name");
-        String HotelName = scanner.next();
-        System.out.println("Enter Hotel rating");
-        int rating = scanner.nextInt();
-        double regularCustomerRate = scanner.nextDouble();
-        hotel = new Hotel(rating, regularCustomerRate);
-        return HotelList.add(hotel);
+
+        System.out.println("Enter hotel name:");
+        hotelName = sc.next();
+        System.out.println("Enter hotel rating:");
+        rating = sc.nextInt();
+        System.out.println("Enter regular customer rate:");
+        regularCustomerRate = sc.nextDouble();
+        hotel = new Hotel(hotelName, rating, regularCustomerRate);
+        return hotelList.add(hotel);
     }
 
+    /**
+     * Method to Print ArrayList hotelList
+     */
     public void printHotelList() {
-        System.out.println(HotelList);
-    }
-
-    public Hotel getCheapestHotel(LocalDate startDate, LocalDate endDate) {
-
-
-        Optional<Hotel> sortedHotelList = HotelList.stream().min(Comparator.comparing(Hotel::getRegularCustomerRate));
-        return sortedHotelList.get();
+        System.out.println(hotelList);
     }
 }
-
-
