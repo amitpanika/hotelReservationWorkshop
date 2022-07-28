@@ -26,7 +26,7 @@ public class Hotel {
     }
 
     /**
-     * Getters and Setters for hotelName, rating and regualrCustomerRate
+     * Getters and Setters for hotelName, rating and regularCustomerRate
      */
     public String getHotelName() {
         return hotelName;
