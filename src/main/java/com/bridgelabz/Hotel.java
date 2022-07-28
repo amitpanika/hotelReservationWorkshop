@@ -5,28 +5,28 @@ public class Hotel {
     private String hotelName;
     private int rating;
     private double regularCustomerRate;
+    private double weekendRegularCustomerRate;
 
     /**
      * Default Constructor
      */
-    public Hotel() {
+    public Hotel(String hotelName, int rating, double regularCustomerRate) {
     }
 
     /**
-     *
-     * @param hotelName           - Name of the hotel.
-     * @param rating              - Rating for the hotel
-     * @param regularCustomerRate - Rate for regular customers.
+     * hotelName           - Name of the hotel.
+     * rating              - Rating for the hotel
+     * regularCustomerRate - Rate for regular customers.
      */
-    public Hotel(String hotelName, int rating, double regularCustomerRate) {
+    public Hotel(String hotelName, int rating, double regularCustomerRate, double weekendRegularCustomerRate) {
         this.hotelName = hotelName;
         this.rating = rating;
         this.regularCustomerRate = regularCustomerRate;
+        this.weekendRegularCustomerRate = weekendRegularCustomerRate;
     }
 
     /**
      * Getters and Setters for hotelName, rating and regualrCustomerRate
-     *
      */
     public String getHotelName() {
         return hotelName;
@@ -52,12 +52,20 @@ public class Hotel {
         this.regularCustomerRate = regularCustomerRate;
     }
 
+    public double getWeekendRegularCustomerRate() {
+        return weekendRegularCustomerRate;
+    }
+
+    public void setWeekendRegularCustomerRate(double weekendRegularCustomerRate) {
+        this.weekendRegularCustomerRate = weekendRegularCustomerRate;
+    }
+
     /**
-     * toSring Method to make list of hotels to String form for printing.
+     * toString Method to make list of hotels to String form for printing.
      */
     @Override
     public String toString() {
-        return "Hotel [hotelName=" + hotelName + ", rating=" + rating + ", regularCustomerRate=" + regularCustomerRate
+        return "Hotel [hotelName=" + hotelName + ", rating=" + rating + ", regularCustomerRate=" + regularCustomerRate + ", weekendRegularCustomerRate =" + weekendRegularCustomerRate
                 + "]";
     }
 }
