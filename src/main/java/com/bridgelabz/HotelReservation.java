@@ -5,6 +5,8 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoField;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.Optional;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
@@ -99,5 +101,18 @@ public class HotelReservation {
             return cheapestHotel.get(0).getHotelName();
         }
         return null;
+    }
+
+    public Hotel getCheapestBestRatedHotel(LocalDate startDate, LocalDate endDate) {
+
+        String cheapestHotels = getCheapestHotel(startDate, endDate);
+        Optional<Hotel> sortedHotelList = hotelList.stream().max(Comparator.comparing(Hotel::getRate));
+        System.out.println("Cheapest Best Rated Hotel : \n" + sortedHotelList.get().getHotelName());
+        return sortedHotelList.get();
+    }
+
+    public Hotel getBestRatedHotel(LocalDate startDate, LocalDate endDate) {
+        Optional<Hotel> sortedHotelList = hotelList.stream().max(Comparator.comparing(Hotel::getRate));
+        return sortedHotelList.get();
     }
 }
