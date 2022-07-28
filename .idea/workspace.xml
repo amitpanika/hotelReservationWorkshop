@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0a238040-d97e-4130-ad28-0e4b0d7941ca" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bridgelabz/HotelReservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bridgelabz/HotelReservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bridgelabz/HotelReservationMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bridgelabz/HotelReservationMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="UC_2_cheapest" />
+        <entry key="$PROJECT_DIR$" value="UC2_CheapestHotelDateRange" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -128,14 +126,22 @@
       <option name="project" value="LOCAL" />
       <updated>1659009807017</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Find CheapestHotel In HotelReservation">
+      <created>1659011016842</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1659011016842</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Adding Hotel by userInput" />
     <MESSAGE value="cheapest" />
     <MESSAGE value="Add HotelName and HotelRates in HotelReservation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add HotelName and HotelRates in HotelReservation" />
+    <MESSAGE value="Find CheapestHotel In HotelReservation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Find CheapestHotel In HotelReservation" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/HotelReservatioin$HotelReservationMain.ic" NAME="HotelReservationMain Coverage Results" MODIFIED="1658897218377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
